@@ -107,5 +107,4 @@ AsymmetricEncryption.prototype.decrypt = function (privateKey, toDecrypt, passph
     }
 };
 var obj = new AsymmetricEncryption();
-console.log(obj);
 module.exports = obj;

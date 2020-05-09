@@ -1,13 +1,15 @@
 {
   "name": "asymmetric-encryption",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.1.0",
+  "main": "asye.js",
   "types": "asye.d.ts",
   "author": "Bisvarup Mukherjee",
   "homepage": "",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc --declaration asye.ts",
+    "precompile": "npm run test",
+    "compile": "webpack && npm run generate-declarations",
+    "generate-declarations": "tsc --declaration asye.ts",
     "watch": "tsc --watch asye.ts",
     "test": "mocha tests",
     "prestd": "npm run compile",
@@ -35,8 +37,11 @@
     "chai": "^4.2.0",
     "mocha": "^7.1.2",
     "standard-version": "^8.0.0",
+    "ts-loader": "^7.0.3",
     "tsc": "^1.20150623.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "crypto-random-string": "^3.2.0"

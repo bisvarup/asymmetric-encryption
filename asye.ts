@@ -120,6 +120,5 @@ AsymmetricEncryption.prototype.decrypt = function (
 };
 
 const obj = new AsymmetricEncryption();
-console.log(obj);
 
 module.exports = obj;
