@@ -1,6 +1,6 @@
 {
   "name": "asymmetric-encryption",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "asye.js",
   "types": "asye.d.ts",
   "author": "Bisvarup Mukherjee",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "precompile": "npm run test",
-    "compile": "webpack && npm run generate-declarations",
+    "compile": "npm run generate-declarations && webpack",
     "generate-declarations": "tsc --declaration asye.ts",
     "watch": "tsc --watch asye.ts",
     "test": "mocha tests",
