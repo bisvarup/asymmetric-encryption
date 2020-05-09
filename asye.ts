@@ -1,29 +1,15 @@
-const {
+import {
   generateKeyPairSync,
   publicEncrypt,
   privateDecrypt,
   generateKeyPair,
-} = require("crypto");
+} from "crypto";
+import { KeyPairGenProps, KeyPairGenTypes } from "./Models/models";
 const cryptoRandomString = require("crypto-random-string");
 
-function asymmetricEncryption() {}
+function AsymmetricEncryption() {}
 
-enum KeyPairGenTypes {
-  rsa = "rsa",
-  dsa = "dsa",
-  ec = "ec",
-  ed25519 = "ed25519",
-  ed448 = "ed448",
-  x25519 = "x25519",
-  x448 = "x448",
-  dh = "dh",
-}
-interface KeyPairGenProps {
-  type: KeyPairGenTypes;
-  modulusLength: 1024 | 2048 | 4096 | 8192;
-}
-
-asymmetricEncryption.prototype.generateKeyPairSync = function generateKeysSync(
+AsymmetricEncryption.prototype.generateKeyPairSync = function generateKeysSync(
   { type, modulusLength }: KeyPairGenProps = {
     type: KeyPairGenTypes.rsa,
     modulusLength: 4096,
@@ -32,6 +18,8 @@ asymmetricEncryption.prototype.generateKeyPairSync = function generateKeysSync(
   try {
     this.config = { type, modulusLength };
     this.passphrase = cryptoRandomString({ length: 96, type: "base64" });
+
+    // @ts-ignore
     const keys = generateKeyPairSync(type, {
       modulusLength,
       namedCurve: "secp256k1",
@@ -53,7 +41,7 @@ asymmetricEncryption.prototype.generateKeyPairSync = function generateKeysSync(
   }
 };
 
-asymmetricEncryption.prototype.generateKeyPair = function generateKeys(
+AsymmetricEncryption.prototype.generateKeyPair = function generateKeys(
   { type, modulusLength }: KeyPairGenProps = {
     type: KeyPairGenTypes.rsa,
     modulusLength: 4096,
@@ -63,6 +51,7 @@ asymmetricEncryption.prototype.generateKeyPair = function generateKeys(
   return new Promise((resolve, reject) => {
     this.passphrase = cryptoRandomString({ length: 96, type: "base64" });
     generateKeyPair(
+      // @ts-ignore
       type,
       {
         modulusLength,
@@ -87,7 +76,7 @@ asymmetricEncryption.prototype.generateKeyPair = function generateKeys(
   });
 };
 
-asymmetricEncryption.prototype.encrypt = function encrypt(
+AsymmetricEncryption.prototype.encrypt = function encrypt(
   publicKey: string,
   toEncrypt: string
 ) {
@@ -105,7 +94,7 @@ asymmetricEncryption.prototype.encrypt = function encrypt(
   }
 };
 
-asymmetricEncryption.prototype.decrypt = function (
+AsymmetricEncryption.prototype.decrypt = function (
   privateKey: string,
   toDecrypt: string,
   passphrase?: string
@@ -130,4 +119,7 @@ asymmetricEncryption.prototype.decrypt = function (
   }
 };
 
-module.exports = new asymmetricEncryption();
+const obj = new AsymmetricEncryption();
+console.log(obj);
+
+module.exports = obj;

@@ -1,7 +1,10 @@
-<p align="center">
-    <h1 align="center">Asymmetric Encryption</h1>
+<div align="center" style="text-align:center">
+    <h1 align="center">🔐 Asymmetric Encryption 🔑</h1>
     <p align="center">Generate Public-Private keypair on your server for asymmetric encryption and decryption</p>
-</p>
+    <p>
+    <img alt="APM" src="https://img.shields.io/apm/l/asymmetric-encryption?style=plastic">
+    </p>
+</div>
 <p><br/></p>
 
 1. Generate public key and private key in the server.
@@ -20,7 +23,9 @@ This module aims at solving the public key, private key and passphase part of th
 ```
 npm i --save asymmetric-encryption
 ```
+
 or
+
 ```
 yarn add asymmetric-encryption
 ```

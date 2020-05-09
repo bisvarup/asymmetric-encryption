@@ -2,17 +2,17 @@
   "name": "asymmetric-encryption",
   "version": "1.0.1",
   "main": "index.js",
-  "types": "index.d.ts",
+  "types": "asye.d.ts",
   "author": "Bisvarup Mukherjee",
   "homepage": "",
   "license": "MIT",
   "scripts": {
-    "compile": "tsc --declaration index.ts",
-    "watch": "tsc --watch index.ts",
+    "compile": "tsc --declaration asye.ts",
+    "watch": "tsc --watch asye.ts",
     "test": "mocha tests",
     "prestd": "npm run compile",
     "std": "standard-version",
-    "poststd": "git push --follow-tags origin master &&  npm publish --access public"
+    "poststd": "git push --follow-tags origin master &&  npm publish"
   },
   "files": [
     "index.js",
