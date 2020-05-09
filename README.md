@@ -1,7 +1,8 @@
 <p align="center">
-    <h1>Asymmetric Encryption</h1>
+    <h1 align="center">Asymmetric Encryption</h1>
     <p align="center">Generate Public-Private keypair on your server for asymmetric encryption and decryption</p>
 </p>
+<p><br/></p>
 
 1. Generate public key and private key in the server.
 2. Forward the public key to your apps (website or app)
@@ -48,4 +49,4 @@ message
 
 ```
 npm tests
-'```
+```
