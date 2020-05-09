@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/bisho1995/asymmetric-encryption/compare/v1.2.2...v1.2.3) (2020-05-09)
+
 ### [1.2.2](https://github.com/bisho1995/asymmetric-encryption/compare/v1.1.6...v1.2.2) (2020-05-09)
 
 ### [1.1.6](https://github.com/bisho1995/asymmetric-encryption/compare/v1.1.5...v1.1.6) (2020-05-09)
