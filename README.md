@@ -1,7 +1,7 @@
 <div align="center" style="text-align:center">
     <h1 align="center">🔐 Asymmetric Encryption 🔑</h1>
     <p align="center">Generate Public-Private keypair on your server for asymmetric encryption and decryption</p>
-    <p style="text-align:center">
+    <p align="center" style="text-align:center">
     <img alt="build passing" src="https://img.shields.io/badge/build-passing-brightgreen">
     <img alt="MIT" src="https://img.shields.io/badge/license-MIT-green">
     </p>
