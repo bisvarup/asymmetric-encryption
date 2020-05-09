@@ -1,6 +1,6 @@
 {
   "name": "asymmetric-encryption",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "main": "asye.js",
   "types": "asye.d.ts",
   "author": "Bisvarup Mukherjee",
@@ -14,7 +14,7 @@
     "test": "mocha tests",
     "prestd": "npm run compile",
     "std": "standard-version",
-    "poststd": "git push --follow-tags origin master &&  npm publish"
+    "poststd": "git push --follow-tags origin master"
   },
   "repository": {
     "type": "git",
