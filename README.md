@@ -34,25 +34,100 @@ yarn add asymmetric-encryption
 ## Usage
 
 ```
-const encrypt = require("asymmetric-encrypt")
+const encrypt = require("asymmetric-encryption")
 
-const { publicKey, privateKey } = encrypt.generateKeyPairSync();
+const { publicKey, privateKey, passphrase } = encrypt.generateKeyPairSync();
 const message = "message";
 
 const enc = encrypt.encrypt(publicKey, message);
 const dec = encrypt.decrypt(privateKey, enc);
 
+console.log(publicKey)
+console.log(privateKey)
+console.log(passphrase)
 console.log(dec)
 ```
 
 Output should be
 
 ```
+-----BEGIN PUBLIC KEY-----
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyQlPzDqlH2urBnRuVXWJ
+yn8bI5WgPwlfXPrrYJZrvI92X6/CXT6zk6WeN+rbTmotFS2Fbex6+3bV1gnvIpMJ
+UOlHuJZmrIebxG8+KYiczNos6aMM4W059bEDcnwRLXljpEJZi8ET3brv6lJcRfy8
+0TUnd/l9LqdIXJGhEL6H+YveqTEYQrTF+aKmvjxwlPmLB+rOUmqoQr3YBLPcxQGO
+8Lr1gxIF+8lrxb4lGSvO/6pHj7n8OGbq9eHMn2kactykHdaL+gZxGf6y8LJcRI5R
+AkcxZKJos8erOpC+kyZgptooMCvzkfhg3hSrxtSWRtmYL8v8dtu3JTunm/3zc+Ui
+Lkl7SvuOCPKUVJMJLOWD8Md8M/pCU8Cw1hmMSgiv2BHdAN8TU31XhNDphoCeJyzT
+aGT5YuRSCy7KCLa8SbREt5/yhAeQmwd3CzWoisOUFUdR7WxQN7ldj+0WOaCKsRB8
+QQ2pDNep/P0Y3tig03PIyz9Zi6zi/fdl0RB6Tbmy3I3nU6ui8wvTkOrN/k7wKVZk
++JFuRl1dgvAyQlVV8cceamVpNnOIk+PSBas3fNuehqqRaz9U3wnyTUILazELd4JH
+d8FLMKNF03HgFXm/2wiFiCBMyctWsu019b8txqG3UpwMaJIqmmzcxqQWJGOP13Co
+iVjAdGAhJ9sgRrnKKg/5+PMCAwEAAQ==
+-----END PUBLIC KEY-----
+
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+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
+-----END ENCRYPTED PRIVATE KEY-----
+
+tRaOP9/jo5q/ZfVXJko/smJlSzx1j52RzQA8Tze5EQ4UmpnTOnrdWsVKRWnB14R5gx558KV6VbsNixoCezdAVhctHosYTlWG
 message
+
 ```
 
 ## Tests
 
 ```
-npm tests
+npm test
 ```
