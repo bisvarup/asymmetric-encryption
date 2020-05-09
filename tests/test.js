@@ -1,4 +1,4 @@
-const encrypt = require("../index");
+const encrypt = require("../asye");
 var { assert, expect } = require("chai");
 
 describe("Asymmetric Encryption", () => {
