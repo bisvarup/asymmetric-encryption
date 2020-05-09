@@ -19,7 +19,7 @@
     "index.d.ts"
   ],
   "directories": {
-    "bin"
+    "bin": "bin"
   },
   "keywords": [
     "asymmetric-encryption",
