@@ -4,7 +4,7 @@
   "main": "asye.js",
   "types": "asye.d.ts",
   "author": "Bisvarup Mukherjee",
-  "homepage": "",
+  "homepage": "https://github.com/bisho1995/asymmetric-encryption",
   "license": "MIT",
   "scripts": {
     "precompile": "npm run test",
@@ -15,6 +15,13 @@
     "prestd": "npm run compile",
     "std": "standard-version",
     "poststd": "git push --follow-tags origin master &&  npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bisho1995/asymmetric-encryption.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bisho1995/asymmetric-encryption/issues"
   },
   "files": [
     "index.js",
